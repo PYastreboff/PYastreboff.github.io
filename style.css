@@ -1,0 +1,1258 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+:root {
+  /*--titleColour: rgb(99, 212, 203);*/
+  --titleColour: rgb(29, 112, 255);
+}
+
+footer {
+  width: 100vw;
+  height: fit-content;
+  background-color: #666;
+}
+
+#intro {
+    font-size: larger;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("img/earth.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    background-attachment: fixed;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#intro h3, #intro h1 {
+    color: white;
+    text-shadow: 2px 2px 20px black;
+}
+
+#intro h3 {
+    font-weight: 200;
+    padding: 2rem;
+}
+
+#intro h1 {
+    margin: 1rem;
+    margin-top: 45vh;
+    font-size: 5rem;
+    font-weight: 100;
+    width: 100%;
+}
+
+.break {
+    height: 1px;
+    width: 30%;
+    background-color: white;
+    border-radius: 2px;
+    margin: .5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 20px black;
+}
+
+.sectionBreak {
+  height: 1px;
+  width: 70%;
+  background-color: #888;
+  border-radius: 2px;
+  margin: 1rem;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 25px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: 0;
+    width: 16px;
+    height: 16px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    z-index: 9;
+    left: calc(50% - 8px);
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+    -moz-transform: translate(-50%, 0%) rotate(45deg);
+    transform: translate(-50%, 0%) rotate(45deg);
+    -webkit-animation: fade_move_down 4s ease-in-out infinite;
+    -moz-animation:    fade_move_down 4s ease-in-out infinite;
+    animation:         fade_move_down 4s ease-in-out infinite;
+}
+  
+  
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@-moz-keyframes fade_move_down {
+  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@keyframes fade_move_down {
+  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+
+@keyframes flicker2 {
+    
+  0%, 17%, 23%, 25%, 53%, 58%, 100% {
+    text-shadow: 
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px rgb(0, 30, 255),
+    0 0 40px rgb(0, 30, 255),
+    0 0 80px rgba(255, 238, 0, 0);
+    opacity: 1;
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+      opacity: .2;
+  }    
+}
+
+/*
+@keyframes flicker2 {
+  0% {
+    opacity: 1;
+  }
+}
+*/
+/*
+@keyframes flicker {
+	40% {
+		opacity: 1;
+	}
+	42% {
+		opacity: 0.8;
+	}
+	43% {
+		opacity: 1;
+	}
+	45% {
+		opacity: 0.3;
+	}
+	46% {
+		opacity: 1;
+	}
+  58% {
+		opacity: 1;
+	}
+  60% {
+		opacity: 0.8;
+	}
+  62% {
+		opacity: 1;
+	}
+	65% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 0.3;
+	}
+	67% {
+		opacity: 1;
+	}
+  96% {
+		opacity: 1;
+	}
+	98% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+*/
+
+@keyframes flicker {
+	0% {
+    opacity: 1;
+  }
+}
+
+#info, #education, #experience, #referees, #portfolio, #skills {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+#info {
+  background-color: white;
+}
+
+#education {
+  background-color: rgb(255, 253, 240);
+  background-image: url("img/blue.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: blue;
+  background-blend-mode: screen;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#skills {
+  background-color: black;
+  background-image: url("img/moon.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: screen;
+}
+
+#portfolio {
+  background-color: rgb(50, 104, 255);
+}
+
+.sectionTitle {
+  color: var(--titleColour);
+  font-size: 4rem;
+  font-weight: 75;
+  margin: .5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.sectionSubTitle {
+  color: rgb(94, 94, 94);
+  font-size: 2rem;
+  font-family: 'Roboto Flex', sans-serif;
+  text-align: center;
+  margin: .1rem 2rem .1rem 2rem;
+}
+
+.sides {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: center;
+  align-items: center;  
+  margin-bottom: 3rem;
+  text-justify: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.rightJust p {
+  margin: .2rem;
+}
+
+.rightJust {
+  justify-content: right;
+  text-justify: right;
+  align-items: right;
+  align-content: flex-end;
+}
+
+.miniTitle {
+  font-family: 'Roboto Flex', sans-serif;
+  color: var(--titleColour);
+  font-size: 2.5rem;
+  font-weight: 75;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  letter-spacing: .1em;
+}
+
+.side {
+  max-width: 20vw;
+  width: 20vw;
+}
+
+.pfpImg {
+  width: 18vw;
+  height: 18vw;
+  align-self: center;
+  justify-self: center;
+  margin: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  border-radius: 20vw;;
+  border: 10px solid white;
+  outline: 10px solid var(--titleColour);
+  opacity: 0.8;
+}
+
+.educations {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.refereesBox {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.schoolTitle {
+  margin-left: 2rem;
+  margin-bottom: .005rem;
+  font-size: 1.5rem;
+  color: aliceblue;
+}
+
+.refereeTitle {
+  margin: .5rem;
+  margin-bottom: .005rem;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.schoolDate {
+  margin-left: 2.1rem;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  color: aliceblue;
+}
+
+.refereeSub {
+  margin-left: .5rem;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.marginBottom {
+  margin-bottom: 2rem;
+}
+
+.marginTop {
+  margin-top: 1rem;
+}
+
+.schoolInfo {
+  margin-top: .2rem;
+  margin-left: 2rem;
+  margin-right: 4rem;
+  color: white;
+}
+
+.refereeComment {
+  margin-top: .2rem;
+  margin-left: .1rem;
+  margin-right: 4rem;
+  color: black;
+}
+
+.breaker  {
+  width: 0px;
+  height: 3rem;
+}
+
+.breakerBig  {
+  width: 0px;
+  height: 8rem;
+}
+
+.breakerMid  {
+  width: 0px;
+  height: 5rem;
+}
+
+.schoolName {
+  min-width: 35vw;
+  width: 35vw;
+}
+
+.refereeName {
+  min-width: 35vw;
+  width: 35vw;
+  color: black;
+}
+
+.schoolLocation {
+  font-size: medium;
+  margin: .8rem;
+  margin-left: 2rem;
+  margin-right: 4rem;
+  color: white;
+}
+
+.refereeSubComment {
+  font-size: medium;
+  margin: .8rem;
+  margin-left: .2rem;
+  margin-right: 4rem;
+  color: #999;
+}
+
+.sectionTitleFooter {
+  color: #eee;
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 4rem;
+  font-weight: 75;
+  margin: .5rem;
+  margin-top: 2rem;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 1.5rem;
+}
+
+.sectionSubTitleFooter {
+  color: #ccc;
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 75;
+  margin: 3rem;
+  margin-top: .1rem;
+  align-self: center;
+  justify-self: center;
+  text-justify: center;
+  align-self: center;
+  text-align: center;
+  margin-bottom: .2rem;
+}
+
+footer {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  /*background-image: url("img/grey.jpg");*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(58, 58, 58);
+  background-attachment: none;
+  background-position: center;
+  width: calc(100vw - 30px);
+}
+
+.socialsBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: fit-content;
+  width: 70%;
+  background-color: none;
+  border-radius: 2px;
+  margin: 1rem;
+}
+
+.socialsBox a {
+  /*text-decoration: underline;*/
+  font-size: 1rem;
+  color: white;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .7;
+}
+
+.icon.email {
+  background-position: 0px calc(-32*3px)
+}
+
+.socialsBox span {
+  opacity: .7;
+  content: "";
+  color: white;
+  display: inline-block;
+  background: url("img/sm_icon_sprite.png") no-repeat;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  margin-right: .5rem;
+}
+
+.socialsBox span {
+  opacity: 1;
+}
+
+.skillsColumn {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.starsBox {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+
+.star {
+  color: white;
+  font-size: 1.5rem;
+  padding: .7rem .5rem .7rem .8rem;
+}
+
+.skillInfo {
+  margin-top: .2rem;
+  font-size: 1.2rem;
+  color: white;
+  min-width: 20vw;
+  width: 20vw;
+  /*font-family: 'Vibur', cursive;*/
+}
+
+.neon {
+  color: rgb(255, 253, 231);
+	text-shadow: 0 0 0 transparent,
+                0 0 .6rem #ffea00,
+                0 0 .79rem rgba(255, 243, 21, 0.658),
+                0 0 .8rem  #ffea0000,
+                0 0 200px  #ffea0000,
+                0 0 300px  #ffea0000,
+                0 0 500px  #ffea0000;
+}
+
+.off {
+  color: rgb(42, 42, 42);
+}
+
+.flicker {
+  animation: flicker 2s infinite alternate;
+}
+
+.skillSub {
+  color: white;
+  font-size: 2.8rem;
+  margin: 0rem 16% 0rem 16%;
+  text-align: center;
+  font-family: 'Zen Tokyo Zoo';
+  text-transform: capitalize;
+  width: 100%;
+  padding: 1rem 0rem .8rem 0rem;
+}
+
+.broken {
+  animation: flicker2 1.5s infinite alternate;
+  font-family: 'Zen Tokyo Zoo';
+}
+
+.cover {
+  position: relative;
+  color: white;
+  font-size: 2.8rem;
+  text-align: center;
+  font-family: 'Zen Tokyo Zoo';
+  text-transform: capitalize;
+  width: 100%;
+  margin-top: -66px;
+  z-index: 10;
+  font-weight: 100;
+ }
+
+.neonText {
+  text-transform: capitalize;
+  text-shadow: 
+  0 0 4px #fff,
+  0 0 11px #fff,
+  0 0 19px rgb(0, 38, 255),
+  0 0 40px rgb(0, 30, 255),
+  0 0 80px rgba(255, 238, 0, 0);
+}
+
+.column.refereeName {
+  margin-right: 1rem;
+  margin-left: 5%;
+  justify-content: flex-start;
+  text-align: left;
+  width: 27%;
+  min-width: 27%;
+}
+
+.portfolioBox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem;
+  width: 100vw;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.project {
+  display: flex;
+  width: calc(50vw - (6rem + 4rem));
+  height: calc((50vw - (6rem + 4rem))/1.78);
+  transition: filter .2s;
+  overflow: hidden;
+}
+
+.project:hover {
+  overflow-y: hidden;
+}
+
+.portfolioBox a {
+  margin: 2rem;
+}
+#appNumberGame:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}
+
+#iptmajor:hover {
+  cursor: pointer;
+  filter: brightness(55%);
+}
+
+#starwars:hover {
+  cursor: pointer;
+  filter: brightness(70%);
+}
+
+#appNumberGame {
+  background-image: url("img/app.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #ddd;
+  background-position: center;
+}
+
+#iptmajor {
+  background-image: url("img/spxphys.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+}
+
+#starwars {
+  background-image: url("img/sw.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+}
+
+.link {
+  background-image: url("img/link.png");
+  background-repeat: no-repeat;
+  background-size: 1.2rem;
+  background-color: rgb(26, 26, 255);
+  background-position: center;
+  padding: 1.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  justify-self: flex-end;
+  align-self: right;
+  margin-left: auto;
+  transition: background-size .5s;
+}
+
+.link:hover {
+  background-size: 1.35rem;
+}
+
+.videoo {
+  width: 80%;
+  height: fit-content;
+  margin: 1rem;
+  margin-right: 3rem;
+}
+
+.videos {
+  width: 80%;
+  height: fit-content;
+  margin: 1rem;
+}
+
+.black {
+  color: black;
+}
+
+@media screen and (max-width: 700px) {
+  .videoo, .videos {
+    align-self: center;
+    margin: 1rem;
+  }
+  #intro h3 {
+      font-weight: 200;
+      padding: .5rem;
+      font-size: 1rem;
+  }
+  #intro h1 {
+      margin: 1rem;
+      margin-top: 55vh;
+      font-size: 2.5rem;
+      font-weight: 100;
+      width: 100%;
+  }
+  .break {
+      height: 1px;
+      width: 50%;
+      background-color: white;
+      border-radius: 2px;
+      margin: .1rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 20px black;
+  }
+  .sectionBreak {
+    height: 1px;
+    width: 70%;
+    background-color: #888;
+    border-radius: 2px;
+    margin: 1rem;
+  }
+  
+  .scroll-down {
+      position: absolute;
+      bottom: 25px;
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      z-index: 100;
+      text-decoration: none;
+      text-shadow: 0;
+      width: 16px;
+      height: 16px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      z-index: 9;
+      left: calc(50% - 8px);
+      -webkit-transform: translate(-50%, 0%) rotate(45deg);
+      -moz-transform: translate(-50%, 0%) rotate(45deg);
+      transform: translate(-50%, 0%) rotate(45deg);
+      -webkit-animation: fade_move_down 4s ease-in-out infinite;
+      -moz-animation:    fade_move_down 4s ease-in-out infinite;
+      animation:         fade_move_down 4s ease-in-out infinite;
+  }
+  
+  #info, #education, #experience, #referees, #portfolio, #skills {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #info {
+    background-color: white;
+  }
+  
+  #education {
+    background-color: rgb(255, 253, 240);
+    background-image: url("img/blue.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: blue;
+    background-blend-mode: screen;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  
+  #skills {
+    background-color: black;
+    background-image: url("img/moonRes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    background-attachment: fixed;
+    background-position: right;
+    background-blend-mode: screen;
+  }
+  
+  #portfolio {
+    background-color: rgb(50, 104, 255);
+  }
+  
+  .sectionTitle {
+    color: var(--titleColour);
+    font-size: 2.5rem;
+    font-weight: 75;
+    margin: .5rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .sectionSubTitle {
+    color: rgb(94, 94, 94);
+    font-size: 1.2rem;
+    font-family: 'Roboto Flex', sans-serif;
+    text-align: center;
+    margin: .1rem 1rem .1rem 1rem;
+  }
+  
+  .sides {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: center;
+    align-items: flex-start;  
+    margin-bottom: 2rem;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rightJust p {
+    margin: 1rem;
+    text-align: center;
+  }
+  
+  .rightJust {
+    justify-content: right;
+    text-justify: right;
+    align-items: right;
+    align-content: flex-end;
+  }
+  
+  .miniTitle {
+    font-family: 'Roboto Flex', sans-serif;
+    color: var(--titleColour);
+    font-size: 2.5rem;
+    font-weight: 75;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    letter-spacing: .1em;
+    text-align: center;
+  }
+  
+  .side {
+    min-width: 100vw;
+    width: 100vw;
+  }
+  
+  .pfpImg {
+    width: 50vw;
+    height: 50vw;
+    align-self: center;
+    justify-self: center;
+    margin: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 25vw;
+    border: 10px solid white;
+    outline: 10px solid var(--titleColour);
+    opacity: 0.8;
+  }
+  
+  .educations {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .refereesBox {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .schoolTitle {
+    margin: .2rem;
+    margin-bottom: .005rem;
+    font-size: 1.5rem;
+    color: aliceblue;
+  }
+  
+  .refereeTitle {
+    margin-bottom: .005rem;
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+  }
+  
+  .schoolDate {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    color: aliceblue;
+    text-align: center;
+  }
+  
+  .refereeSub {
+    margin: .5rem;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+  }
+  
+  .marginBottom {
+    margin-bottom: 2rem;
+  }
+  
+  .marginTop {
+    margin-top: 1rem;
+  }
+  
+  .schoolInfo {
+    margin-top: .2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .refereeComment {
+    margin-top: .2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+    color: black;
+  }
+  
+  .breaker  {
+    width: 0px;
+    height: 3rem;
+  }
+  
+  .breakerBig  {
+    width: 0px;
+    height: 8rem;
+  }
+  
+  .breakerMid  {
+    width: 0px;
+    height: 5rem;
+  }
+  
+  .schoolName {
+    min-width: 100vw;
+    width: 100vw;
+    text-align: center;
+  }
+  
+  .refereeName {
+    min-width: 35vw;
+    width: 35vw;
+    color: black;
+  }
+  
+  .schoolLocation {
+    font-size: medium;
+    margin: .8rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .refereeSubComment {
+    font-size: medium;
+    margin: .8rem;
+    margin: 1rem;
+    text-align: center;
+    color: #999;
+  }
+  
+  .sectionTitleFooter {
+    color: #eee;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 75;
+    margin: .5rem;
+    margin-top: 2rem;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sectionSubTitleFooter {
+    color: #ccc;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 75;
+    margin: 1rem;
+    margin-top: .1rem;
+    align-self: center;
+    justify-self: center;
+    text-justify: center;
+    align-self: center;
+    text-align: center;
+    margin-bottom: .2rem;
+  }
+  
+  footer {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    /*background-image: url("img/grey.jpg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(58, 58, 58);
+    background-attachment: none;
+    background-position: center;
+    width: calc(100vw - 30px);
+  }
+  
+  .socialsBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: fit-content;
+    width: 70%;
+    background-color: none;
+    border-radius: 2px;
+    margin: 1rem;
+  }
+  
+  .socialsBox a {
+    text-decoration: underline;
+    font-size: .7rem;
+    color: white;
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+    width: 100vw;
+  }
+  
+  .icon.email {
+    background-position: 0px calc(-32*3px)
+  }
+  
+  .socialsBox span {
+    opacity: .7;
+    content: "";
+    color: white;
+    display: inline-block;
+    background: url("img/sm_icon_sprite.png") no-repeat;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    margin-right: .5rem;
+  }
+  
+  .socialsBox span {
+    opacity: 1;
+  }
+  
+  .socialsBox a:hover {
+    opacity: 1;
+  }
+  
+  .skillsColumn {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .skill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .starsBox {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+  }
+  
+  .star {
+    color: white;
+    font-size: 1.5rem;
+    padding: .7rem .5rem .7rem .8rem;
+  }
+  
+  .skillInfo {
+    margin-top: .2rem;
+    font-size: medium;
+    color: white;
+    min-width: 25vw;
+    width: 25vw;
+  }
+  
+  .neon {
+    color: rgb(255, 253, 231);
+    text-shadow: 0 0 0 transparent,
+                  0 0 .6rem #ffea00,
+                  0 0 .79rem rgba(255, 243, 21, 0.658),
+                  0 0 .8rem  #ffea0000,
+                  0 0 200px  #ffea0000,
+                  0 0 300px  #ffea0000,
+                  0 0 500px  #ffea0000;
+  }
+  
+  .off {
+    color: rgb(36, 36, 36);
+  }
+  
+  .flicker {
+    animation: flicker 2s infinite alternate;
+  }
+  
+  .skillSub {
+    color: white;
+    font-size: 2.5rem;
+    margin: 1rem 16% .5rem 16%;
+    text-align: center;
+    font-weight: 100;
+  }
+
+  .cover {
+    position: relative;
+    font-family: 'Zen Tokyo Zoo';
+    text-transform: capitalize;
+    width: 100%;
+    margin-top: calc(-71px - 1rem);
+    z-index: 10;
+    font-weight: 100;
+    color: white;
+    font-size: 2.5rem;
+    margin: -69px 16% .5rem 16%;
+    text-align: center;
+    font-weight: 100;
+   }
+  
+  
+  .column.refereeName {
+    justify-content: flex-start;
+    text-align: left;
+    width: 100vw;
+    min-width: 100vw;
+    margin: 0px;
+  }
+  
+  .portfolioBox {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+    width: 100vw;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project {
+    display: flex;
+    width: 80vw;
+    height: calc(80vw/1.78);
+    transition: filter 0.2s;
+    overflow: hidden;
+  }
+  
+  .project:hover {
+    overflow-y: hidden;
+  }
+  
+  .portfolioBox a {
+    margin: 2rem;
+  }
+
+  #appNumberGame:hover {
+    cursor: pointer;
+    filter: brightness(85%);
+  }
+  
+  #iptmajor:hover {
+    cursor: pointer;
+    filter: brightness(55%);
+  }
+  
+  #starwars:hover {
+    cursor: pointer;
+    filter: brightness(70%);
+  }
+  
+  #appNumberGame {
+    background-image: url("img/app.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ddd;
+    background-position: center;
+  }
+  
+  #iptmajor {
+    background-image: url("img/spxphys.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    background-position: center;
+  }
+  
+  #starwars {
+    background-image: url("img/sw.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    background-position: center;
+  }
+  
+  .link {
+    background-image: url("img/link.png");
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+    background-color: rgb(26, 26, 255);
+    background-position: center;
+    padding: 1.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    justify-self: flex-end;
+    align-self: right;
+    margin-left: auto;
+    transition: background-size .5s;
+  }
+  
+  .link:hover {
+    background-size: 1.35rem;
+  }
+}
+
+.black {
+  color: black;
+}

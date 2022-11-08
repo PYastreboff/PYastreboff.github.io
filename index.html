@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Peter Yastreboff's Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <link type="image/png" sizes="300x300" rel="icon" href="img/favicon.png">
+    </head>
+    <body>
+        <div id="intro">
+            <h1>Peter Yastreboff</h1>
+            <div class="break"></div>
+            <h3>Digital Interactive Portfolio</h3>
+            <div class="scroll-down"></div>
+        </div>
+        <div id="info">
+            <div class="sectionTitle">Foreword</div>
+            <div class="sectionSubTitle">What am I capable of? Come here to find out!</div>
+            <div class="sectionBreak"></div>
+            
+            <div class="sides">
+                <div class="column rightJust side">
+                    <div class="miniTitle">About This Portfolio</div>
+                    <p>As a testament to my passion for Graphic Design and video editing, along with my skills in web development, I have decided to create this Digital Interactive Portfolio in order to showcase my skills further than just my portfolio items. I hope you enjoy!</p>
+                </div>
+                <img class="pfpImg" src="img/pfp.jpg"></img>
+                <div class="column rightJust side">
+                    <div class="miniTitle">About Me</div>
+                    <p><b>Name: </b></p>
+                    <p>Peter Yastreboff</p>
+                    <p><b>Age: </b></p>
+                    <p id="age">17</p>
+                    <script>
+                        function calcAge(dateString) {
+                            var birthday = +new Date(dateString);
+                            return ~~((Date.now() - birthday) / (31557600000)); // number is the number of seconds in the required years
+                        }
+                        document.getElementById("age").innerHTML = calcAge("2005-02-14"); // change the age <p> tag to my real age
+                    </script>
+                    <p><b>Location: </b></p>
+                    <p>Sydney, Australia</p>
+                </div>
+            </div>
+        </div>
+        <div id="education">
+            <div class="sectionTitle" style="/*color: rgb(141, 213, 207);*/color: white;">Not Dead Yet</div>
+            <div class="sectionSubTitle" style="color: white;">My contribution to my school's film production.</div>
+            <div class="sectionBreak" style="background-color: white;"></div>
+            <div class="educations">
+                <div class="column marginBottom marginTop">
+                    <div class="breaker"></div>
+                    <div class="row">
+                        <div class="column schoolName">
+                            <b class="schoolTitle">Lead Cinematographer</b>
+                            <p class="schoolDate">Feb 2020 - Dec 2020</p>
+
+                            <b class="schoolTitle">Editor</b>
+                            <p class="schoolDate">Jan 2021 - Apr 2021</p>
+                        </div>
+                        <div class="column">
+                            <p class="schoolInfo">For this production we were given a brief to create a semi-surreal film to outline climate change. We worked as a team to create this piece. In which we ended up winning first prize.</p>
+                            <p class="schoolLocation">Please find a snippet below:</p>
+                            <video class="videoo" controls>
+                                <source src="./vid/02_OCEAN_EDIT_v1.0_Trim.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="breaker"></div>
+                </div>
+            </div>
+        </div>
+        <div id="experience">
+            <div class="sectionTitle">SPX Physics Online</div>
+            <div class="sectionSubTitle">A Website, by me, to teach the HSC Physics Course</div>
+            <div class="sectionBreak"></div>
+            <div class="educations">
+                <div class="column marginBottom marginTop">
+                    <div class="breaker"></div>
+                    <div class="row">
+                        <div class="column schoolName">
+                            <div class="breaker"></div>
+                            <b class="schoolTitle black">SPX Physics Online</b>
+                            <div class="breaker"></div>
+                            <p class="schoolDate black">This website was created as a prototype. It's idea is to act as a repository of well formatted information for students to study and quiz themselves on HSC Physics content. It's purpose was also to promote engagement through interactivity and a satisfying looking GUI.</p>
+                        </div>
+                        <div class="column">
+                            <img class="videoo" src="./img/web.png"></img>
+                        </div>
+                    </div>
+                    <div class="breaker"></div>
+                </div>
+        </div>
+        <div id="skills">
+            <div class="sectionTitle" style="color: white;">Star Wars Fan Film</div>
+            <div class="sectionSubTitle" style="color:white">Submission for our school's annual film festival "Lights, Camera, Pius"!</div>
+            <div class="sectionBreak" style="color: white;"></div>
+            <div class="skill">
+                <p class="skillInfo">Rated 5 Stars at the school film festival: </p>
+                <div class="starsBox">
+                    <p class="star neon flicker">★</p>
+                    <p class="star neon">★</p>
+                    <p class="star neon">★</p>
+                    <p class="star neon">★</p>
+                    <p class="star neon">★</p>
+                </div>
+            </div>
+            <div class="breaker"></div>
+            <div class="skillsColumn">
+                <div class="skillSub neonText">F<span class="neonText broken">I</span>LM SN<span class="neonText broken">I</span>PPET</div>
+                <div class="cover">FILM SNIPPET</div> <!-- Cover to Mask Shadow Overlay -->
+                <div class="breaker"></div>
+            </div>
+            <video class="videoo" controls>
+                <source src="./vid/Editor V13_Trim.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="breaker"></div>
+        </div>
+        </div>
+        <!-- <div id="referees">
+            <div class="sectionTitle" style="color: black;">References</div>
+            <div class="sectionBreak" style="color: #666;"></div>
+            
+        </div>-->
+    </body>
+    <footer>
+        <div class="sectionTitleFooter">Thats All For Now Folks.</div>
+        <div class="sectionSubTitleFooter">Can't wait to expand on this.</div>
+        <!-- <div class="sectionSubTitleFooter"> - Carl Sagan, Contact</div> -->
+        <div class="breaker"></div>
+        <div class="sectionBreak"></div>
+        <div class="socialsBox">
+            <a>Created By Peter Yastreboff 2022</a>
+            <a>© Peter Yastreboff</a>
+        </div>
+        <div class="sectionBreak"></div>
+        <div class="breakerMid"></div> 
+    </footer>
+    <style></style>
+    <script></script>
+</html>
