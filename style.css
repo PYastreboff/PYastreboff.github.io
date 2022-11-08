@@ -744,7 +744,7 @@ footer {
   
   .scroll-down {
       position: absolute;
-      bottom: 25px;
+      bottom: 10px;
       display: block;
       text-align: center;
       font-size: 20px;
@@ -1001,6 +1001,7 @@ footer {
     margin: .5rem;
     margin-top: 2rem;
     align-self: center;
+    text-align: center;
     justify-self: center;
     margin-bottom: 1.5rem;
   }
@@ -1046,7 +1047,6 @@ footer {
   }
   
   .socialsBox a {
-    text-decoration: underline;
     font-size: .7rem;
     color: white;
     margin: .5rem;
@@ -1054,7 +1054,7 @@ footer {
     justify-content: center;
     align-items: center;
     opacity: .7;
-    width: 100vw;
+    width: 100%
   }
   
   .icon.email {
