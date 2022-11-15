@@ -17,6 +17,10 @@
   --titleColour: rgb(29, 112, 255);
 }
 
+body {
+  background-color: black;
+}
+
 footer {
   width: 100vw;
   height: fit-content;
@@ -205,12 +209,15 @@ footer {
   align-items: center;
 }
 
+#experience {
+  background-color: white;
+}
+
 #info {
   background-color: white;
 }
 
 #education {
-  background-color: rgb(255, 253, 240);
   background-image: url("img/blue.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -473,7 +480,7 @@ footer {
   margin: 1rem;
 }
 
-.socialsBox a {
+.socialsBox p {
   /*text-decoration: underline;*/
   font-size: 1rem;
   color: white;
@@ -482,6 +489,7 @@ footer {
   justify-content: center;
   align-items: center;
   opacity: .7;
+  text-align: center;
 }
 
 .icon.email {
@@ -709,6 +717,24 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
+  #intro {
+      font-size: larger;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("img/earth.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: black;
+      -webkit-background-size: cover;
+      background-attachment: scroll;
+      background-position: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
   .videoo, .videos {
     align-self: center;
     margin: 1rem;
@@ -720,7 +746,7 @@ footer {
   }
   #intro h1 {
       margin: 1rem;
-      margin-top: 55vh;
+      margin-top: 40vh;
       font-size: 2.5rem;
       font-weight: 100;
       width: 100%;
@@ -755,7 +781,7 @@ footer {
       height: 16px;
       border-bottom: 2px solid #fff;
       border-right: 2px solid #fff;
-      z-index: 9;
+      z-index: 4;
       left: calc(50% - 8px);
       -webkit-transform: translate(-50%, 0%) rotate(45deg);
       -moz-transform: translate(-50%, 0%) rotate(45deg);
@@ -779,23 +805,24 @@ footer {
   }
   
   #education {
-    background-color: rgb(255, 253, 240);
+    background-color: blue;
+    /*background-color: rgb(255, 253, 240);*/
     background-image: url("img/blue.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: blue;
+    -webkit-background-size: cover;
     background-blend-mode: screen;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
   }
   
   #skills {
     background-color: black;
     background-image: url("img/moonRes.jpg");
+    -webkit-background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
-  
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: right;
     background-blend-mode: screen;
   }
@@ -842,7 +869,7 @@ footer {
   }
   
   .rightJust p {
-    margin: 1rem;
+    margin: 0px 1rem .5rem 1rem;
     text-align: center;
   }
   
@@ -879,7 +906,7 @@ footer {
     margin-right: 3rem;
     border-radius: 25vw;
     border: 10px solid white;
-    outline: 10px solid var(--titleColour);
+    outline: none;
     opacity: 0.8;
   }
   
@@ -969,7 +996,7 @@ footer {
   .schoolName {
     min-width: 100vw;
     width: 100vw;
-    text-align: center;
+    text-align: center; 
   }
   
   .refereeName {
