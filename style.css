@@ -17,7 +17,7 @@
 .about {
   background-color: #ccc;
   color: black;
-  min-height: 90vh;
+  min-height: 85vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
