@@ -11,19 +11,31 @@
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
     background-color: #ccc;
+    overflow: hidden;
 }
 
-.intro {
-  display: grid;
-  place-items: center;
-  align-content: center;
+.about {
+  background-color: #ccc;
+  color: black;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
 }
 
-.intro h3 {
+.about h1 {
+  color: black;
+  font-weight: 600;
+}
+
+.about h3 {
   margin-top: 1rem;
   color: #444;
   font-weight: 100;
+  font-size: medium;
 }
 
 #logo {
