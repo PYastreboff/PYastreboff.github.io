@@ -40,5 +40,15 @@
 
 #logo {
   width: fit-content;
+  max-width: 25vw;
+  max-height: 40vh;
   margin-bottom: 2rem;
+  margin-left: 3vw;
+}
+
+@media screen and (max-width: 600px) {
+  #logo {
+    max-width: 70vw;
+    max-height: 50vh;
+  }
 }
