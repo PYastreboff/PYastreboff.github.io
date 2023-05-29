@@ -1,54 +1,187 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
-
-* {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden;
-    background-color: #ccc;
-    overflow: hidden;
+/* Set the colors */
+:root {
+  --primary-color: black;
+  --secondary-color: white;
 }
 
-.about {
-  background-color: #ccc;
-  color: black;
-  min-height: 90vh;
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the main section */
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+
+.logo {
+  position: relative;
+  width: 300px; /* Adjust the width as needed */
+  opacity: 0;
+  animation: fadeAndRotate 3s ease-in-out forwards;
+  animation-delay: 0.5s; /* Delay the logo animation */
+}
+
+.logo img {
+  width: 100%;
+}
+
+.description {
+  margin-top: 40px; /* Adjust the margin-top value as needed */
+  font-family: Arial, sans-serif;
+  font-size: 24px; /* Adjust the font size as needed */
+  color: var(--secondary-color);
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 2s; /* Delay the description animation */
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.dividing-line {
+  position: relative;
+  width: 70%;
+  height: 4px; /* Adjust the thickness of the dividing line */
+  background-color: var(--secondary-color);
+  opacity: 0;
+  transform: scaleX(0);
+  animation: slideInLine 1s ease-in-out forwards;
+  animation-delay: 3s; /* Delay the dividing line animation */
+  margin: 30px 10px; /* Adjust the margin value as needed */
+  content: "";
+}
+
+.link-list {
+  margin-top: 20px; /* Adjust the margin-top value to move the links higher */
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 4s; /* Delay the links animation */
+}
+
+.link-list ul {
+  list-style-type: none;
+}
+
+.link-list ul li {
+  margin-bottom: 20px; /* Increase the margin-bottom value to create more space between the links */
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-list ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  margin: 1rem;
+  opacity: 0;
+  animation: fadeAndScale 1s ease-in-out forwards;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
 }
 
-.about h1 {
-  color: black;
-  font-weight: 600;
+.link-list ul li a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease-in-out;
 }
 
-.about h3 {
-  margin-top: 1rem;
-  color: #444;
-  font-weight: 100;
-  font-size: medium;
+.link-list ul li a:hover {
+  color: var(--primary-color);
 }
 
-#logo {
-  width: fit-content;
-  max-width: 25vw;
-  max-height: 40vh;
-  margin-bottom: 2rem;
-  margin-left: 3vw;
+.link-list ul li a:hover:before {
+  width: 100%;
 }
 
-@media screen and (max-width: 600px) {
-  #logo {
-    max-width: 70vw;
-    max-height: 50vh;
+@keyframes fadeAndRotate {
+  0% {
+      opacity: 0;
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.2);
+  }
+  100% {
+      opacity: 1;
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) scale(1);
+  }
+}
+
+@keyframes fadeAndScale {
+  0% {
+      opacity: 0;
+      transform: scale(0.2);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideInLine {
+  0% {
+      opacity: 0;
+      transform: scaleX(0);
+  }
+  100% {
+      opacity: 1;
+      transform: scaleX(0.8); /* Adjust the width of the dividing line */
+  }
+}
+
+/* Media queries for responsive styles */
+
+@media screen and (max-width: 768px) {
+  .logo {
+      width: 200px; /* Adjust the width for smaller screens */
+  }
+
+  .description {
+      font-size: 18px; /* Adjust the font size for smaller screens */
+  }
+
+  .dividing-line {
+      width: 70%; /* Adjust the width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+      width: 150px; /* Adjust the width for even smaller screens */
+  }
+
+  .description {
+      font-size: 16px; /* Adjust the font size for even smaller screens */
+  }
+
+  .dividing-line {
+      width: 90%; /* Adjust the width for even smaller screens */
   }
 }
