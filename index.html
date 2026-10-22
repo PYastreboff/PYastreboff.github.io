@@ -1,57 +1,87 @@
-<!--
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Peter Yastreboff's Github Pages</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
-        <script src="./js/script.js"></script>
-        <link type="image/png" sizes="300x300" rel="icon" href="img/logo.svg">
-    </head>
-    <body>
-        <div class="about">
-            <img id="logo" src="./img/logo.svg"></img>
-            <h1>Welcome to Peter Yastreboff's Github Pages Base Page</h1>
-            <div class="break"></div>
-            <h3>Please ask me if you're looking for a certain site.</h3>
-        </div>
-        <footer>
-        </footer>
-    </body>
-    <style></style>
-    <script></script>
-</html>
-
-
--->
-
-<!DOCTYPE html>
-<html>
 <head>
-    <title>Peter Yastreboff</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+  <meta name="theme-color" content="#070814">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Peter Yastreboff — drive to LinkedIn, portfolio, and GitHub.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Peter Yastreboff</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style3d.css?v=12">
 </head>
 <body>
-    <main>
-        <div class="logo">
-            <img src="img/logo.svg" alt="Logo">
-        </div>
-        <p class="description">Peter Yastreboff's home page website. Please contact me if you have any further questions.</p>
-        <div class="dividing-line"></div>
-        <div class="link-list">
-            <ul>
-                <li><a href="https://pyastreboff.github.io/portfolio/">My Portfolio</a></li>
-                <li><a href="#"></a></li> <!-- Break in List -->
-                <li><a href="https://pyastreboff.github.io/mattjones/">A Website for Matt Jones</a></li>
-                <li><a href="https://pyastreboff.github.io/legacy-portfolio/">My Legacy Portfolio</a></li>
-            </ul>
-        </div>
-    </main>
+  <div id="loading">
+    <img class="loading-logo" src="img/logo.svg" alt="" width="56" height="64">
+    <div class="loading-bar-container">
+      <div class="loading-bar"></div>
+    </div>
+    <p class="loading-text">Loading</p>
+  </div>
 
-    <script src="js/script.js"></script>
+  <div id="fallback" hidden>
+    <img src="img/logo.svg" alt="Peter Yastreboff">
+    <h1>Peter Yastreboff</h1>
+    <p>This page needs WebGL. Use the links below.</p>
+    <nav>
+      <a href="https://www.linkedin.com/in/peter-yastreboff-6a9664313/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://petery.is-a.dev/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+      <a href="https://github.com/PYastreboff" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </div>
+
+  <header id="hud">
+    <div class="brand">
+      <img class="brand-logo" src="img/logo.svg" alt="" width="28" height="32">
+      <div class="brand-copy">
+        <div class="title">Peter Yastreboff</div>
+        <div class="subtitle">Drive to a destination</div>
+      </div>
+    </div>
+    <nav class="links" aria-label="Destinations">
+      <a href="https://www.linkedin.com/in/peter-yastreboff-6a9664313/" target="_blank" rel="noopener noreferrer" class="link-pill">
+        <span class="pill-icon" aria-hidden="true">in</span>
+        <span class="pill-text">LinkedIn</span>
+      </a>
+      <a href="https://petery.is-a.dev/" target="_blank" rel="noopener noreferrer" class="link-pill">
+        <span class="pill-icon" aria-hidden="true">P</span>
+        <span class="pill-text">Portfolio</span>
+      </a>
+      <a href="https://github.com/PYastreboff" target="_blank" rel="noopener noreferrer" class="link-pill">
+        <span class="pill-icon" aria-hidden="true">GH</span>
+        <span class="pill-text">GitHub</span>
+      </a>
+    </nav>
+  </header>
+
+  <canvas id="minimap" width="176" height="176" aria-hidden="true"></canvas>
+
+  <div id="hint" class="desktop-only">WASD to drive · E to open</div>
+
+  <div id="station-card" class="hidden">
+    <div class="station-kicker">Destination</div>
+    <div class="station-name"></div>
+    <div class="station-desc"></div>
+    <button type="button" id="station-open">Open</button>
+    <div class="station-prompt desktop-only">Press E</div>
+    <div class="station-prompt mobile-only">Tap Open</div>
+  </div>
+
+  <div id="mobile-controls">
+    <div id="joystick" aria-label="Drive">
+      <div class="joy-base">
+        <div class="joy-knob"></div>
+      </div>
+    </div>
+    <button type="button" class="action-btn" id="btn-action" disabled>Open</button>
+  </div>
+
+  <canvas id="scene"></canvas>
+
+  <script type="module" src="js3d/main.js?v=19"></script>
 </body>
 </html>
